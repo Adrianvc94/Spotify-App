@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
 
   useEffect(() => {
-    
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const accessToken = urlParams.get('access_token');
@@ -13,6 +13,9 @@ function App() {
 
     console.log(accessToken);
     console.log(refreshToken);
+
+    
+
   }, []);
 
   return (
