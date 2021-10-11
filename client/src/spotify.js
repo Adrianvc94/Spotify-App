@@ -99,3 +99,11 @@ const getAccessToken = () => {
 }
 
 export const access_token = getAccessToken();
+
+axios.defaults.baseURL = 'https://api.spotify.com/v1';
+axios.defaults.headers['Authorization'] = `Bearer ${access_token}`;
+axios.defaults.headers['Content-Type'] = 'application/json';
+
+
+// Get Current User's Profile
+export const getCurrentUserProfile = () => axios.get('/me');
