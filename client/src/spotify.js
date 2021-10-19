@@ -107,3 +107,13 @@ axios.defaults.headers['Content-Type'] = 'application/json';
 
 // Get Current User's Profile
 export const getCurrentUserProfile = () => axios.get('/me');
+
+// Get a list of current User`s Playlist
+export const getCurrentUserPlaylist = (limit = 20) => {
+  return axios.get(`/me/playlists?limit=${limit}`);
+}
+
+// Get User`s Top Artists and Tracks
+export const getTopArtists = (time_range = 'medium_term') => {
+  return axios.get(`/me/top/artists?time_range=${time_range}`);
+}
