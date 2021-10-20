@@ -24,8 +24,7 @@ const StyledLoginButton = styled.a`
   }
 `;
 
-const LOGIN_URI = 
-  process.env.NODE_ENV !== 'production' ? 'http://localhost:8888/login' : 'https://spotify-app-vinicio.herokuapp.com/login';
+const LOGIN_URI = process.env.NODE_ENV !== 'production' ? 'http://localhost:8888/login' : 'https://spotify-app-vinicio.herokuapp.com/login';
 
 const Login = () => (
   <StyledLoginContainer>
